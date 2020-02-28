@@ -1,0 +1,38 @@
+.headline {
+  width: 147px;
+  margin: 0 auto;
+}
+
+.headline > h1 {
+  color: #395382;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #f2cb61 50%);
+  display: table;
+  padding: 5px;
+  margin-left: 15px;
+  margin: 0;
+  font-size: 40px;
+}
+
+.subtitle {
+  width: 325px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.subtitle > p {
+  color: #395382;
+}
+
+.content_1 {
+  width: 325px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.content_1 > h2 {
+  color: black;
+}
+
+.content_1 > h2 > a {
+  color: black;
+}

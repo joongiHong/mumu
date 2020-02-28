@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "MapoPeacefull";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoPeacefullA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cafe24Ohsquare";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Cafe24Ohsquare.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "MapoPeacefull", sans-serif;
+}
+
+a:link,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Cafe24Ohsquare", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  text-align: center;
+  padding: 10px;
+}
+
+#header > a > img {
+  width: 200px;
+}
+
+#header > a > span {
+  color: #36537f;
+  float: right;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+#header > hr {
+  height: 5px;
+  border: 0;
+  background-color: #36537f;
+}
+
+#footer {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+#footer > a {
+  color: #36537f;
+}

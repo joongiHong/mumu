@@ -1,0 +1,59 @@
+#banner {
+  text-align: center;
+}
+
+#banner > a > img {
+  width: 350px;
+}
+
+.menu_1 {
+  width: 325px;
+  margin: 0 auto;
+  margin-top: 10px;
+  border: 3px solid #36537f;
+  padding: 10px;
+  transition: all 0.3s linear;
+}
+
+.menu_1 > h1 {
+  color: #395382;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #f2cb61 50%);
+  display: table;
+  padding: 5px;
+  margin-left: 15px;
+  margin: 0;
+  font-size: 40px;
+  transition: all 0.3s linear;
+}
+
+.menu_1 > p {
+  color: #395382;
+  transition: all 0.3s linear;
+}
+
+.menu_1 > span {
+  float: right;
+  padding-top: 10px;
+  padding-right: 10px;
+  color: #395382;
+}
+
+.menu_1:hover {
+  background-color: #395382;
+  transition: all 0.3s linear;
+}
+
+.menu_1:hover > h1 {
+  color: white;
+  transition: all 0.3s linear;
+}
+
+.menu_1:hover > p {
+  color: white;
+  transition: all 0.3s linear;
+}
+
+.menu_1:hover > span {
+  color: white;
+  transition: all 0.3s linear;
+}
