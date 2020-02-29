@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MuMu - 음악신청서비스</title>
-    <link rel="stylesheet" href="css/main.css?new" />
-    <link rel="stylesheet" href="css/content.css?new" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/content.css" />
     <link rel="shortcut icon" href="image/icon.ico" />
     <meta name="theme-color" content="#36537f" />
     <!-- PC 버전 관련 안내
@@ -19,6 +19,7 @@
     </script>
     -->
   </head>
+
   <body>
     <!-- 메뉴 부분 -->
     <div id="header">
@@ -88,12 +89,12 @@
     </div>
 
     <div id="footer">
-      <a href=""
-        ><p>
+      <a href="">
+        <p>
           본 서비스에는 오픈소스가 사용되었습니다.<br />제작자분들께
           감사드립니다.
-        </p></a
-      >
+        </p>
+      </a>
       <p>(c) 2020 <b>JoongiHong</b> (bracket) All Rights Reserved.</p>
     </div>
     <script

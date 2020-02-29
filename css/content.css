@@ -1,5 +1,5 @@
 .headline {
-  width: 147px;
+  width: 152px;
   margin: 0 auto;
 }
 
@@ -35,4 +35,50 @@
 
 .content_1 > h2 > a {
   color: black;
+}
+
+.content_2 {
+  width: 325px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* 인풋 디자인 */
+
+.i_text {
+  width: 100%;
+  background-color: #395382;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.i_text > span {
+  color: white;
+}
+
+.i_text > input {
+  margin-left: 8px;
+  width: 280px;
+  height: 30px;
+  border: 0;
+  padding-left: 10px;
+}
+
+.i_button_1 {
+  width: 325px;
+}
+
+.i_button_1 > button {
+  width: 345px;
+  background-color: white;
+  color: #395382;
+  border: 1px solid #395382;
+  height: 50px;
+  transition: all 0.3s linear;
+}
+
+.i_button_1 > button:hover {
+  background-color: #395382;
+  color: white;
+  transition: all 0.3s linear;
 }
