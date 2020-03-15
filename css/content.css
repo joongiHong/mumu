@@ -1,5 +1,5 @@
 .headline {
-  width: 152px;
+  width: 165px;
   margin: 0 auto;
 }
 
@@ -81,4 +81,95 @@
   background-color: #395382;
   color: white;
   transition: all 0.3s linear;
+}
+
+.i_text_1 > * {
+  margin: 0;
+  padding: 0;
+}
+
+.i_text_1 > h3 {
+  margin-bottom: 30px;
+  font-family: "Cafe24Ohsquare", sans-serif;
+  font-size: 30px;
+  color: #395382;
+}
+
+.i_text_2 > * {
+  margin: 0;
+  padding: 0;
+}
+
+.i_text_2 > h3 {
+  margin-bottom: 10px;
+  font-family: "Cafe24Ohsquare", sans-serif;
+  font-size: 50px;
+  color: #f2cb61;
+}
+
+.i_text_3 {
+  margin-bottom: 30px;
+}
+
+.i_text_3 > * {
+  margin: 0;
+  padding: 0;
+}
+
+.i_text_3 > span {
+  font-size: 15px;
+  color: #395382;
+}
+
+.i_hr {
+  height: 2px;
+  border: 0;
+  background-color: #36537f;
+}
+
+/* 게시판 디자인 */
+
+.board_div {
+  border: 3px solid #36537f;
+  width: 100%;
+  padding: 10px;
+  transition: all 0.3s linear;
+  margin-bottom: 10px;
+}
+
+.board_div > * {
+  padding: 0;
+  margin: 0;
+  color: #36537f;
+  transition: all 0.3s linear;
+}
+
+.board_div > h3 {
+  font-family: "Cafe24Ohsquare", sans-serif;
+  transition: all 0.3s linear;
+}
+
+.board_div:hover {
+  background-color: #36537f;
+  transition: all 0.3s linear;
+}
+
+.board_div:hover > * {
+  color: white;
+  transition: all 0.3s linear;
+}
+
+.board_title {
+  color: #36537f;
+  font-family: "Cafe24Ohsquare", sans-serif;
+  margin-bottom: 10px;
+}
+
+.board_date {
+  color: #36537f;
+  margin-top: 0;
+}
+
+.board_content {
+  color: black;
 }

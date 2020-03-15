@@ -1,0 +1,55 @@
+body {
+  text-align: center;
+  padding: 30px;
+}
+
+header {
+  padding-bottom: 10px;
+}
+
+header > img {
+  width: 200px;
+}
+
+header > h1 {
+  color: #395382;
+  font-size: 30px;
+}
+
+hr {
+  border: 3px solid #395382;
+  height: 0;
+}
+
+p {
+  font-size: 20px;
+  margin: 0;
+}
+
+button {
+  width: 345px;
+  background-color: white;
+  color: #395382;
+  border: 1px solid #395382;
+  height: 50px;
+  transition: all 0.3s linear;
+}
+
+button:hover {
+  background-color: #395382;
+  color: white;
+  transition: all 0.3s linear;
+}
+
+.i_text {
+  margin-top: 10px;
+  width: 234px;
+  height: 50px;
+  border: 3px solid #395382;
+  color: #395382;
+  padding-left: 10px;
+}
+
+.i_text::placeholder {
+  color: #395382;
+}

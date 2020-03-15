@@ -1,6 +1,12 @@
 <?php
 require '../config.php';
 
+session_start();
+if ($_SESSION['user_id'] != "") {
+    echo "<script>location.href='music';</script>";
+    exit;
+}
+
 if ($recaptcha == 1) {
     $data = array(
         'secret' => $g_secretkey,
@@ -25,14 +31,14 @@ if ($recaptcha == 1) {
     }
 }
 
-if ($_POST['u_num'] == "" or $_POST['u_name'] == "") {
-    echo "<script>alert('학번 혹은 이름이 비어 있습니다.\\n입력하여 주십시오.');</script>";
+if ($_POST['id'] == "" or $_POST['password'] == "") {
+    echo "<script>alert('아이디 혹은 비밀번호가 비어 있습니다.\\n입력하여 주십시오.');</script>";
     echo "<script>history.back()</script>;";
     exit;
 }
 
-$u_num = $con->escape_string($_POST['u_num']);
-$u_name = $con->escape_string($_POST['u_name']);
+$id = $con->escape_string($_POST['id']);
+$password = $_POST['password'];
 
 if (mysqli_connect_errno()) {
     echo "<script>alert('MySQL 접근에 실패하였습니다.";
@@ -41,26 +47,27 @@ if (mysqli_connect_errno()) {
     exit;
 }
 
-$sql = "SELECT * FROM student WHERE num='$u_num'";
+$sql = "SELECT * FROM user WHERE id='$id'";
 $re = $con->query($sql);
+$info = mysqli_fetch_array($re);
 
 if (mysqli_num_rows($re) == 1) {
-    $sql = "SELECT * FROM student WHERE num='$u_num' AND name='$u_name'";
-    $re = $con->query($sql);
-
-    if (mysqli_num_rows($re) == 1) {
+    if (!password_verify($password, $info['password'])) {
         session_start();
-        $_SESSION['s_num'] = $u_num;
-        echo "<script>location.href='order.php';</script>";
+        $_SESSION['user_id'] = "";
+        echo "<script>alert('계정을 찾지 못하였습니다.\\n방송부에 문의하여 주십시오.');</script>";
+        echo "<script>history.back()</script>;";
     } else {
         session_start();
-        $_SESSION['s_num'] = "";
-        echo "<script>alert('학생 정보를 찾지 못하였습니다.\\n방송부에 문의하여 주십시오.');</script>";
-        echo "<script>history.back()</script>;";
+        $_SESSION['user_id'] = $id;
+        $_SESSION['user_name'] = $info['name'];
+        $_SESSION['user_grade'] = $info['grade'];
+        echo "<script>alert('" . $_SESSION['user_grade'] . "');</script>";
+        echo "<script>location.href='music';</script>";
     }
 } else {
     session_start();
-    $_SESSION['s_num'] = "";
-    echo "<script>alert('학생 정보를 찾지 못하였습니다.\\n방송부에 문의하여 주십시오.');</script>";
+    $_SESSION['user_id'] = "";
+    echo "<script>alert('계정을 찾지 못하였습니다.\\n방송부에 문의하여 주십시오.');</script>";
     echo "<script>history.back()</script>;";
 }

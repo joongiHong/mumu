@@ -1,0 +1,184 @@
+/* 로그인창 */
+#login {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+  border: 3px solid #395382;
+  text-align: center;
+  padding: 10px;
+  padding-top: 20px;
+}
+
+#login > span {
+  color: #395382;
+}
+
+/* 헤더 */
+header {
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+header > a > img {
+  width: 200px;
+}
+
+header > a > h2 {
+  display: inline;
+  font-family: "Cafe24Ohsquare", sans-serif;
+  color: #395382;
+  margin-right: 10px;
+  margin-left: 10px;
+  transition: all 0.3s linear;
+  padding: 5px;
+}
+
+header > a:hover {
+  text-decoration: none;
+}
+
+header > a > h2:hover {
+  color: white;
+  background-color: #395382;
+  transition: all 0.3s linear;
+}
+
+header > hr {
+  width: 100%;
+  height: 3px;
+  background-color: #395382;
+  border: 0;
+}
+
+/* 제목 */
+.title {
+  color: #395382;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #f2cb61 50%);
+  display: table;
+  padding: 5px;
+  margin-left: 15px;
+  margin: 0;
+  font-size: 40px;
+  transition: all 0.3s linear;
+}
+
+.title_group {
+  color: #395382;
+  font-size: 30px;
+  font-family: "Cafe24Ohsquare", sans-serif;
+}
+
+.title_sgroup {
+  color: #395382;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+/* 전반적 마진 */
+#main_content {
+  padding: 20px;
+  padding-left: 30px;
+}
+
+/* 유저상자 */
+#user {
+  position: fixed;
+  float: right;
+  top: 10px;
+  right: 30px;
+  background-color: #395382;
+  color: white;
+  width: 200px;
+  padding: 10px;
+}
+
+#user > * {
+  margin: 0;
+  padding: 0;
+}
+
+#user > h1 {
+  font-size: 30px;
+}
+
+#user > a > p {
+  color: white;
+  margin: 0;
+  display: inline;
+}
+
+/* 대시보드 상자 */
+.dashboard_box {
+  border: 3px solid #395382;
+  width: 320px;
+  padding: 10px;
+  background-color: #395382;
+}
+
+.dashboard_box > * {
+  display: inline;
+}
+
+.dashboard_box > h1 {
+  color: white;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  font-size: 35px;
+}
+
+.dashboard_box > h2 {
+  color: #f2cb61;
+}
+
+/* 인풋 디자인 */
+.i_text_1 {
+  margin-top: 10px;
+  width: 234px;
+  height: 50px;
+  border: 3px solid #395382;
+  color: #395382;
+  padding-left: 10px;
+}
+
+.i_text_1::placeholder {
+  color: #395382;
+}
+
+.i_button_1 {
+  margin-top: 20px;
+  width: 250px;
+  height: 50px;
+  background-color: #395382;
+  color: white;
+  border: 0;
+}
+
+.i_button_2 {
+  background-color: #395382;
+  color: white;
+  border: 0;
+}
+
+.i_button_3 {
+  background-color: #cc3d3d;
+  color: white;
+  border: 0;
+}
+
+.i_textarea_1 {
+  margin-top: 10px;
+  border: 3px solid #395382;
+  color: black;
+  padding-left: 10px;
+}
+
+.i_select_1 {
+  border: 3px solid #395382;
+  color: #395382;
+  margin-top: 10px;
+}

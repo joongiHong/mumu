@@ -1,14 +1,12 @@
 <?php 
-require '../config.php'; 
-
-if ($serviceoff == 1) {
-  echo "<script>alert('신청 업무가 일시 중단되었습니다.\\n방송부의 사정으로 중단되었으니 공지를 참고해 주세요.\\n\\n사유 : ".$serviceoff_r."');</script>";
-  echo "<script>location.href='../index.php';</script>;";
-}
-
-if ($checkstudent == 0) {
-  echo "<script>location.href='order.php';</script>";
-}
+require '../config.php';
+$n = $_GET['num'];
+$sql = "SELECT * FROM board WHERE num=$n";
+$result = mysqli_query($con, $sql);
+$row = mysqli_fetch_array($result);
+$title = addslashes($row['title']);
+$content = addslashes($row['content']);
+$date = $row['date'];
 ?>
 <!DOCTYPE html>
 <html lang="ko">
@@ -19,7 +17,6 @@ if ($checkstudent == 0) {
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/content.css" />
     <link rel="shortcut icon" href="../image/icon.ico" />
-    <?php if ($recaptcha == 1) {echo "<script src='https://www.google.com/recaptcha/api.js?render=" . $g_sitekey . "'></script>";} ?>
     <meta name="theme-color" content="#36537f" />
     <!-- PC 버전 관련 안내
     <script lang="javascript">
@@ -43,34 +40,19 @@ if ($checkstudent == 0) {
 
     <!-- 제목 부분 -->
     <div class="headline">
-      <h1>학생인증</h1>
+      <h1>공지사항</h1>
     </div>
 
-    <!-- 설명 부분 -->
-    <div class="subtitle">
-      <p>
-        본교 학생 여부를 확인하기 위하여<br />
-        학생 인증을 진행합니다.<br />
-        이름과 학번을 입력해 주십시오.
-      </p>
-    </div>
-
-    <!-- 입력 폼 부분 -->
+    <!-- 본문 부분 -->
     <div class="content_2">
-      <form action="check_user.php" method="POST" name="checkuser">
-        <div class="i_text">
-          <span><i class="fas fa-user"></i></span>
-          <input type="number" name="u_num" placeholder="학번" />
-        </div>
-        <div class="i_text">
-          <span><i class="fas fa-address-card"></i></span>
-          <input type="name" name="u_name" placeholder="이름" />
-        </div>
-        <div class="i_button_1">
-          <button type="submit">학생 인증</button>
-        </div>
-        <input type="hidden" id="g-recaptcha" name="g-recaptcha">
-      </form>
+      <h2 class="board_title"><?php echo $title ?></h2>
+      <p class="board_date"><?php echo $date ?></p>
+      <hr class="i_hr" />
+      <p class="board_content"><?php echo $content ?></p>
+      <hr class="i_hr" />
+      <a href="index.php"
+        ><p class="board_content" style="text-align: center;">목록으로</p></a
+      >
     </div>
 
     <div id="footer">
@@ -87,11 +69,15 @@ if ($checkstudent == 0) {
       crossorigin="anonymous"
     ></script>
     <script type="text/javascript">
-    grecaptcha.ready(function() {
-      grecaptcha.execute('<?php echo $g_sitekey ?>', {action: 'homepage'}).then(function(token) {
-        document.getElementById('g-recaptcha').value = token;
+      grecaptcha.ready(function() {
+        grecaptcha
+          .execute("<?php echo $g_sitekey ?>", {
+            action: "homepage"
+          })
+          .then(function(token) {
+            document.getElementById("g-recaptcha").value = token;
+          });
       });
-    });
     </script>
   </body>
 </html>
