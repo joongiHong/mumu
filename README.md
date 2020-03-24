@@ -1,4 +1,3 @@
-<!--
 <p align="center">
     <img src="https://github.com/joongiHong/mumu/blob/master/image/logo.png?raw=true" width="300">
     <h1 align="center" style="font-size: 3em;">MuMu</h1>
@@ -8,7 +7,6 @@
     </p>
     <p><b>MuMu</b>란 학교나 학원, 교육원 등 학생들이 모여있는 단체에서 음악을 송출할 경우 <b>학생들이 원하는 음악을 신청할 수 있도록 하는 서비스</b>입니다. 간단 설치기가 존재하기 때문에 서버와 도메인이 준비되어 있다면 언제든지 몇 분만에 설치를 완료하실 수 있습니다. 다만 본 MuMu는 학생이 개발한 프로그램이므로 치명적인 버그가 있을 수 있으며 타 서비스와 다르게 빠르게 버그레포트가 지원되지 않을 수 있습니다.</p>
 </p>
--->
 
 <br/>
 
