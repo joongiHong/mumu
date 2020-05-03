@@ -65,7 +65,7 @@ if (!is_file('config.php')) {
 
   <div id="menu_sub">
     <!-- 규정집 부분 -->
-    <a href="rule.pdf">
+    <a href="rule.php">
       <div class="menu_1">
         <span><i class="fas fa-bookmark fa-2x"></i></i></span>
         <h1>규정집</h1>
